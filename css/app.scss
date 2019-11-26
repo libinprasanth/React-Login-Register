@@ -1,0 +1,52 @@
+@import 'base'; 
+body{
+  font-family: 'Open Sans', sans-serif;
+  color: #15141f;
+}  
+/* Form Control */ 
+.form-group--1 {
+  label{
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .form-control{ 
+    font-size: 1rem;
+    height: auto;
+    text-indent: .8rem;
+    padding: 0;
+    line-height: 50px;
+    outline: none;
+    width: 100%;
+    border: 1px solid #e9eaea;
+    border-radius: 2px;
+    transition: border-color .15s;
+    font-weight: 400; 
+    &:focus{
+      box-shadow: none;
+      border-color: $primary-color;
+    }
+    &.is-invalid{
+      border-color: #f00;
+    }
+  }
+}
+ 
+.btn{
+  border-radius: 0;
+  transition: .5s;
+}
+.btn-primary{
+  background: $primary-color;
+  border-color: $primary-color; 
+  &:hover, &:focus{
+    background: $primary-color-hover !important;
+    border-color: $primary-color-hover !important;
+    box-shadow: none !important;
+  } 
+}
+.btn-md{
+  line-height: 50px;
+  padding: 0 30px;
+  font-size: 1.25rem;
+}
