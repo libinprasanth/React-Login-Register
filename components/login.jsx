@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../css/login.scss";
 
 class Login extends Component {
@@ -13,14 +13,22 @@ class Login extends Component {
       email: "",
       password: "",
       submitedSignup: false
-    }; 
+    };
     this.btnPress = this.btnPress.bind(this);
   }
 
   render() {
     let active = this.state.active;
-    const { email, password, submitedLogin, submitedSignup, fname, lname, mobile } = this.state;
- 
+    const {
+      email,
+      password,
+      submitedLogin,
+      submitedSignup,
+      fname,
+      lname,
+      mobile
+    } = this.state;
+
     return (
       <React.Fragment>
         <div className="login-wrp row m-0 align-items-center">
@@ -38,8 +46,8 @@ class Login extends Component {
               >
                 Signup
               </li>
-            </ul> 
-            { /* Login form start */ }
+            </ul>
+            {/* Login form start */}
             <div className={`box-widget ${active == 0 ? "active" : ""}`}>
               <form onSubmit={this.handleLogin}>
                 <div className="form-group form-group--1 ">
@@ -74,30 +82,43 @@ class Login extends Component {
                     Login
                   </button>
                 </div>
-                <p className="desc">Don't remember your password ? <Link to="/reset">Reset Password</Link></p>
+                <p className="desc">
+                  Don't remember your password ?{" "}
+                  <Link to="/reset">Reset Password</Link>
+                </p>
                 <h5>Log In with Another Account</h5>
 
                 <div className="loginWithSocial row">
                   <div className="col">
-                    <button className="facebook"><i className="fa fa-facebook"></i></button>
+                    <button className="facebook">
+                      <i className="fa fa-facebook" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="twitter"><i className="fa fa-twitter"></i></button>
+                    <button className="twitter">
+                      <i className="fa fa-twitter" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="linkedin"><i className="fa fa-linkedin"></i></button>
+                    <button className="linkedin">
+                      <i className="fa fa-linkedin" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="google"><i className="fa fa-google"></i></button>
+                    <button className="google">
+                      <i className="fa fa-google" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="github"><i className="fa fa-github"></i></button>
+                    <button className="github">
+                      <i className="fa fa-github" />
+                    </button>
                   </div>
                 </div>
               </form>
             </div>
 
-            { /* Signup form start */ }
+            {/* Signup form start */}
             <div className={`box-widget ${active == 1 ? "active" : ""}`}>
               <form onSubmit={this.handleSignup}>
                 <div className="form-group form-group--1 ">
@@ -150,7 +171,9 @@ class Login extends Component {
                     value={mobile}
                     onChange={this.handleChange}
                   />
-                  <div className="invalid-feedback">Phone Number is required</div>
+                  <div className="invalid-feedback">
+                    Phone Number is required
+                  </div>
                 </div>
 
                 <div className="form-group form-group--1">
@@ -171,29 +194,38 @@ class Login extends Component {
                   <button className="btn btn-primary btn-md w-100">
                     Signup
                   </button>
-                </div> 
+                </div>
                 <h5>Signup with Another Account</h5>
 
                 <div className="loginWithSocial row">
                   <div className="col">
-                    <button className="facebook"><i className="fa fa-facebook"></i></button>
+                    <button className="facebook">
+                      <i className="fa fa-facebook" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="twitter"><i className="fa fa-twitter"></i></button>
+                    <button className="twitter">
+                      <i className="fa fa-twitter" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="linkedin"><i className="fa fa-linkedin"></i></button>
+                    <button className="linkedin">
+                      <i className="fa fa-linkedin" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="google"><i className="fa fa-google"></i></button>
+                    <button className="google">
+                      <i className="fa fa-google" />
+                    </button>
                   </div>
                   <div className="col">
-                    <button className="github"><i className="fa fa-github"></i></button>
+                    <button className="github">
+                      <i className="fa fa-github" />
+                    </button>
                   </div>
                 </div>
               </form>
             </div>
-
           </div>
         </div>
       </React.Fragment>
@@ -222,14 +254,13 @@ class Login extends Component {
     });
   };
 
-  // Signup Actions 
+  // Signup Actions
   handleSignup = event => {
     event.preventDefault();
     this.setState({
       submitedSignup: true
     });
-  }
+  };
 }
-
 
 export default Login;

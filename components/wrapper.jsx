@@ -5,12 +5,9 @@ class Wrapper extends Component{
   render(){
     return(
       <React.Fragment>
-       <Switch>  
-          <Route exact path='/login'>
-            login
-          </Route>
+       <Switch>   
           <Route exact path='/'>
-            as
+            Welcome
           </Route>
        </Switch>
       </React.Fragment>
